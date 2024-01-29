@@ -165,6 +165,7 @@ kable(head(most_pop,10), caption = '<center> **Top Ten "Most Popular" Songs Sinc
 ```
 This table shows the top 10 "most popular" songs since 1958 in descending order, with popularity measured by the total number of weeks spent on the Billboard Top 100. 
 
+### **B)**
 ```{r echo=FALSE}
 diversity <- billboard %>% 
   filter(!year %in% c('1958','2021')) %>% 
@@ -180,6 +181,7 @@ diversity[diversity$unique_songs==min(diversity$unique_songs),]
 ```
 This graph shows the change in musical diversity across years measured by the number of unique songs in the Billboard Top 100 each year. The data does not include 1958 and 2021 since it is incomplete in those years. Diversity reached a peak in 1966 with a maximum of 803 unique songs on the chart, and interestingly decreased overall from there until reaching a low of only 384 unique songs in 2001. Throughout the 2000s however, diversity has increased, almost reaching 1966 levels in 2020. Overall, musical diversity has greatly declined and returned from the 1960s to the 2000s.
 
+### **C)**
 ```{r echo=FALSE}
 ten_week_hits <- billboard %>%
   filter(weeks_on_chart >= 10)
